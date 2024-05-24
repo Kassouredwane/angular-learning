@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<div class="products">
+    <div class="container">
+        <div class="row justify-content-center display-products">
+            <div class="col-xs-6 col-md-6 col-lg-4 col-xl-3" (click)="onSelect(product)" *ngFor="let product of products">
+                <div class="card border-0">
+                    <img [src]="product.image" class="card-img-top img-fluid img-product" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{product.productName}}</h5>
+                      <p class="card-text">{{product.title}}</p>
+                      <a class="btn btn-primary" (click)="onSelect(product)">Show Details</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

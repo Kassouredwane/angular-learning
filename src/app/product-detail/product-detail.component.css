@@ -1,0 +1,21 @@
+.row {
+    max-width: 100%;
+  }
+  
+  .col-6 {
+    max-width: 100%;
+  }
+  
+  .product-image {
+    height: 100%;
+  }
+  
+  .alert {
+    position: relative;
+    top: -178px;
+  }
+  
+  .product-img-cart {
+    width: 70px;
+    height: 70px;
+  }
