@@ -1,0 +1,22 @@
+.card {
+    height: 400px;
+    /* width: 300px !important; */
+  }
+  
+  #cart {
+    height: calc(100vh - 60px);
+    width: 100%;
+    /* position: fixed; */
+    top: 63px;
+    /* right: 0; */
+    /* z-index: 5; */
+  }
+  
+  .product-img-cart {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .price {
+    color: red;
+  }

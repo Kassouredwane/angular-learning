@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { DisplayProductComponent } from './display-product/display-product.component';
 import { routingComponent } from './app-routing.module';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     DisplayProductComponent,
     routingComponent,
     ProductDetailComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<div id="cart" class="modal bg-white fade cart">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header sticky-top bg-white">
+        <h3 class="text-primary">Shopping Cart</h3>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="product d-flex justify-content-between align-items-center mb-4"
+          *ngFor="let product of productsCard">
+          <img [src]="product.image" class="img-fluid product-img-cart" alt="...">
+          <div class="product-details">
+            <p>{{product.productName}}</p>
+            <h4 class="price">{{product.price}} $</h4>
+          </div>
+          <!-- <button class="btn btn-primary fs-6 p-0" (click)="deleteProductCart(product.productName)">delete</button> -->
+          <button class="btn btn-primary fs-6 p-0">delete</button>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-between align-items-center">
+        <p class="total-price">Totale Price : 1700 $</p>
+        <button class="btn btn-primary p-0">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
