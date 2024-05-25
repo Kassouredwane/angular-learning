@@ -8,6 +8,8 @@ import { DisplayProductComponent } from './display-product/display-product.compo
 import { routingComponent } from './app-routing.module';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CardComponent } from './card/card.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { CardComponent } from './card/card.component';
     routingComponent,
     ProductDetailComponent,
     CardComponent,
+    InscriptionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

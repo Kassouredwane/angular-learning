@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<h2 class="mb-5">Bootcamp Enrollement Form</h2>
+<form class="row g-3 mt-5 needs-validation" #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">First Name :</label>
+        <input type="text" class="form-control" id="validationCustom01" name="firstName" #name="ngModel" required
+            [(ngModel)]="userModel.firstName" [class.is-invalid]="name.invalid && name.touched"
+            [class.is-valid]="name.valid && name.touched">
+        <div class="valid-feedback" [class.d-none]="name.invalid">Looks good!</div>
+        <div class="invalid-feedback" [class.d-none]="name.valid || name.untouched">First name is not valid</div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="validationCustom02" name="lastName" #lastName="ngModel" required
+            [class.is-invalid]="lastName.invalid && lastName.touched"
+            [class.is-valid]="lastName.valid && lastName.touched" [(ngModel)]="userModel.lastName">
+        <div class="valid-feedback" [class.d-none]="lastName.invalid">Looks good!</div>
+        <div class="invalid-feedback" [class.d-none]="lastName.valid || lastName.untouched">Last name is not valid</div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustomEmail" class="form-label">Email</label>
+        <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">&#64;</span>
+            <input type="email" class="form-control" name="email" #email="ngModel" id="validationCustomEmail" required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="userModel.email"
+                aria-describedby="inputGroupPrepend" [class.is-valid]="email.valid && email.touched"
+                [class.is-invalid]="email.invalid && email.touched">
+            <div class="valid-feedback" [class.d-none]="email.invalid && email.touched">Looks good!</div>
+            <div class="invalid-feedback" [class.d-none]="email.valid && email.touched">Email is not valid</div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">City</label>
+        <input type="text" class="form-control" name="city" #city="ngModel" id="validationCustom03" required
+            [(ngModel)]="userModel.city" [class.is-invalid]="city.invalid && city.touched"
+            [class.is-valid]="city.valid && city.touched">
+        <div class="valid-feedback" [class.d-none]="city.invalid && city.touched">Looks good!</div>
+        <div class="invalid-feedback" [class.d-none]="city.valid && city.touched">Email is not valid</div>
+    </div>
+    <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">Job Status</label>
+        <select class="form-select" name="jobStatus" id="validationCustom04" required [(ngModel)]="userModel.jobStatus" (change)="validateJobSelect(job.value)"
+            #job="ngModel" [class.is-invalid]="jobHasError && city.touched" [class.is-valid]="!jobHasError && job.touched">
+            <option selected value="choose an option">Choose an option...</option>
+            <option *ngFor="let job of jobs" [value]="job"></option>>{{job}}</option>
+        </select>
+        <div class="valid-feedback" [class.d-none]="!jobHasError && job.touched">Looks good!</div>
+        <div class="invalid-feedback" [class.d-none]="jobHasError && job.touched">¨Please select a valid option</div>
+    </div>
+    <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" name="phone" id="validationCustom05" required pattern="^\d{12}$"
+            [(ngModel)]="userModel.phone" #phone="ngModel" [class.is-invalid]="phone.invalid && phone.touched"
+            [class.is-valid]="city.valid && city.touched">
+        <div *ngIf="phone.errors && phone.invalid">
+            <small class="text-danger" *ngIf="phone.errors['required']">Phone number is required</small>
+            <small class="text-danger" *ngIf="phone.errors['pattern']">Phone number ust be contain 12 digit</small>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" name="subscribe" type="checkbox" value="" id="invalidCheck" required
+                [(ngModel)]="userModel.subscribe">
+            <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
+            <div class="invalid-feedback">You must agree before submitting.</div>
+        </div>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit" [disabled]="userForm.form.invalid">Submit form</button>
+      </div>
+</form>
