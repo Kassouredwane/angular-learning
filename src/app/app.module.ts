@@ -9,7 +9,8 @@ import { routingComponent } from './app-routing.module';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CardComponent } from './card/card.component';
 import { InscriptionComponent } from './inscription/inscription.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,14 @@ import { FormsModule } from '@angular/forms';
     ProductDetailComponent,
     CardComponent,
     InscriptionComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

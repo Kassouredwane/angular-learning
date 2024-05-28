@@ -42,7 +42,7 @@
         <select class="form-select" name="jobStatus" id="validationCustom04" required [(ngModel)]="userModel.jobStatus" (change)="validateJobSelect(job.value)"
             #job="ngModel" [class.is-invalid]="jobHasError && city.touched" [class.is-valid]="!jobHasError && job.touched">
             <option selected value="choose an option">Choose an option...</option>
-            <option *ngFor="let job of jobs" [value]="job"></option>>{{job}}</option>
+            <option *ngFor="let job of jobs" [value]="job">{{job}}</option>
         </select>
         <div class="valid-feedback" [class.d-none]="!jobHasError && job.touched">Looks good!</div>
         <div class="invalid-feedback" [class.d-none]="jobHasError && job.touched">¨Please select a valid option</div>

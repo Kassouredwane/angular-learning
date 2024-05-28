@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "productName": "Product One",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/1.jpg",
+      "price": 520
+    },
+    {
+      "productName": "Product Two",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/2.jpg",
+      "price": 300
+    },
+    {
+      "productName": "Product Three",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/3.jpg",
+      "price": 270
+    },
+    {
+      "productName": "Product Four",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/4.jpg",
+      "price": 100
+    },
+    {
+      "productName": "Product Five",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/1.jpg",
+      "price": 99
+    },
+    {
+      "productName": "Product Sixe",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/belt.jpg",
+      "price": 120
+    },
+    {
+      "productName": "Product Seven",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/clothes-1.jpg",
+      "price": 500
+    },
+    {
+      "productName": "Product Eight",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/clothes-2.jpg",
+      "price": 200
+    },
+    {
+      "productName": "Product Nine",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/clothes-3.jpg",
+      "price": 199
+    },
+    {
+      "productName": "Product Ten",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/clothes-4.jpg",
+      "price": 299
+    },
+    {
+      "productName": "Product Eleven",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/jacket-1.jpg",
+      "price": 149
+    },
+    {
+      "productName": "Product Tweleve",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/jacket-2.jpg",
+      "price": 199
+    },
+    {
+      "productName": "Product thirten",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "assets/products_images/jacket-3.jpg",
+      "price": 250
+    }
+  ]
+}
