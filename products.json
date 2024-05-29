@@ -77,6 +77,13 @@
       "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
       "image": "assets/products_images/jacket-3.jpg",
       "price": 250
+    },
+    {
+      "id": "4bf5",
+      "productName": "Product Forteen",
+      "title": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "image": "image product forteen",
+      "price": "120"
     }
   ]
 }

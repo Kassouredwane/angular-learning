@@ -17,7 +17,15 @@ export class ProductsServiceService {
     return this.http.get<product[]>(this._url);
   }
 
-  addProduct(product: product){
-    return this.http.post<product>(this._serverUrl, product);
+  // addProduct(prod: product){
+  //   return this.http.post<product>(this._serverUrl, prod);
+  // }
+
+  addProduct(prod: any){
+    return this.http.post<any>(this._serverUrl, prod);
+  }
+
+  getProductsJsonServer():Observable<product[]>{
+    return this.http.get<product[]>(this._serverUrl)
   }
 }

@@ -10,7 +10,7 @@ import { ProductsServiceService } from '../products-service.service';
 export class ReactiveFormsComponent {
 
   registrationProductForm!: FormGroup;
-  constructor(private fb: FormBuilder, private _productService: ProductsServiceService) { }
+  constructor(private fb: FormBuilder, private productService: ProductsServiceService) { }
 
   get productName() {
     return this.registrationProductForm.get('productName');
@@ -35,8 +35,19 @@ export class ReactiveFormsComponent {
       price: [0, Validators.required],
     })
   }
+
   onSubmit() {
-    this._productService.addProduct(this.registrationProductForm.value);
-    console.log("product was added succefuly");
+    this.productService.addProduct(this.registrationProductForm.value).subscribe(date => console.log("sucess !"))
+    // this.productService.addProduct(this.registrationProductForm.value);
+    // console.log("product was added succefuly");
+
+    // const newProduct={
+    //   productName:this.productName,
+    //   title:this.title,
+    //   image:this.image,
+    //   price:this.price
+    // }
+    // this._productService.addProduct(newProduct);
+    // console.log("product was added succefuly");
   }
 }

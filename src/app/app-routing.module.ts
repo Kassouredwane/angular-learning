@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { TestJsonServerComponent } from './test-json-server/test-json-server.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'/products', pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'products/:productName', component: ProductDetailComponent },
   { path: 'inscription', component: InscriptionComponent },
   { path: 'reactive-form', component: ReactiveFormsComponent },
+  { path: 'testJsonServer', component: TestJsonServerComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

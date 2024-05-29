@@ -11,6 +11,7 @@ import { CardComponent } from './card/card.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { TestJsonServerComponent } from './test-json-server/test-json-server.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     ProductDetailComponent,
     CardComponent,
     InscriptionComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    TestJsonServerComponent
   ],
   imports: [
     BrowserModule,
